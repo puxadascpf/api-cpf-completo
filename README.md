@@ -18,9 +18,6 @@ O **Morall Buscas** é uma plataforma privada para **consultas cadastrais autori
 
 A proposta é centralizar consultas, histórico, assinatura mensal e integração via API em um ambiente simples, moderno e responsivo.
 
-> Página criada para divulgação pública no GitHub.  
-> Não publique tokens, CPFs reais, respostas reais de consulta ou dados sensíveis neste repositório.
-
 ---
 
 ## ✅ Recursos principais
@@ -32,7 +29,6 @@ A proposta é centralizar consultas, histórico, assinatura mensal e integraçã
 | ⚡ API | Integração com sistemas internos e automações. |
 | 💳 Assinatura mensal | Planos mensais com acesso ao painel. |
 | 📱 Responsivo | Acesso por desktop, tablet e celular. |
-| 🛡️ Uso responsável | Comunicação com foco em autorização, finalidade legítima e privacidade. |
 
 ---
 
@@ -82,28 +78,6 @@ curl -X GET "https://morallbuscas.com/api/v1/query/cpf?cpf=00000000000" \
 | API | R$100/mês | Integrações e uso avançado |
 
 > Edite os valores e limites conforme os planos reais do seu sistema.
-
----
-
-## 🛡️ Uso responsável
-
-Esta divulgação é institucional. O serviço deve ser usado apenas em situações autorizadas e com finalidade legítima.
-
-Evite usar ou divulgar termos como:
-
-- “puxar dados”
-- “descobrir dados”
-- “consultar qualquer pessoa”
-- “dados de terceiros sem autorização”
-
-Prefira termos profissionais:
-
-- consulta cadastral autorizada
-- validação cadastral
-- painel privado
-- API de consulta
-- uso empresarial
-- finalidade legítima
 
 ---
 
