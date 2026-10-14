@@ -1,10 +1,10 @@
 <div align="center">
 
-# 🔎 Morall Buscas
+# 🔎 CPF Busca API — CPF Completo via API
 
-### Consultas cadastrais em painel privado, com histórico, assinatura mensal e integração via API.
+### Consultas rápidas em painel privado e organizado — histórico, assinatura mensal via Pix e API completa.
 
-[![Site oficial](https://img.shields.io/badge/Acessar%20site-morallbuscas.com-00D4FF?style=for-the-badge)](https://morallbuscas.com/)
+[![Site oficial](https://img.shields.io/badge/Acessar%20site-cpfbusca.com-00D4FF?style=for-the-badge)](https://cpfbusca.com/)
 [![API](https://img.shields.io/badge/API-Bearer%20Token-2EF2D0?style=for-the-badge)](#-exemplo-de-api)
 [![Uso responsável](https://img.shields.io/badge/Uso-responsável-FFD166?style=for-the-badge)](#-uso-responsável)
 
@@ -12,11 +12,11 @@
 
 ---
 
-## 🚀 Sobre o Morall Buscas
+## 🚀 Sobre o CPF Busca
 
-O **Morall Buscas** é uma plataforma privada para **consultas cadastrais autorizadas**, feita para quem precisa de um painel rápido, organizado e direto ao ponto.
+Consulta completa de CPF via API: a **API do CPF Busca** entrega retorno organizado com cobertura ampla de módulos e documentação por endpoint.
 
-A proposta é centralizar consultas, histórico, assinatura mensal e integração via API em um ambiente simples, moderno e responsivo.
+O **CPF Busca** (cpfbusca.com) é uma plataforma privada de consultas com **mais de 40 módulos**, painel moderno com histórico organizado, assinatura mensal via **Pix** com liberação automática e uma **API completa** para integração com sistemas próprios.
 
 ---
 
@@ -24,22 +24,13 @@ A proposta é centralizar consultas, histórico, assinatura mensal e integraçã
 
 | Recurso | Descrição |
 |---|---|
-| 🔎 Consultas rápidas | Painel privado para consultas cadastrais autorizadas. |
-| 📊 Histórico | Organização das consultas realizadas. |
-| ⚡ API | Integração com sistemas internos e automações. |
-| 💳 Assinatura mensal | Planos mensais com acesso ao painel. |
-| 📱 Responsivo | Acesso por desktop, tablet e celular. |
-
----
-
-## 🧩 Indicado para
-
-- Validação cadastral autorizada
-- Organização de consultas internas
-- Integração via API
-- Painéis privados
-- Sistemas empresariais
-- Fluxos operacionais com finalidade legítima
+| 🔎 Consultas rápidas | CPF, nome, telefone, placa, chassi, CNPJ, endereço/CEP, parentes, vizinhos, score, fotos e mais. |
+| 📊 Painel privado | Dashboard limpo com plano, uso mensal e limites transparentes. |
+| 🕘 Histórico | Cada consulta registrada e fácil de revisar. |
+| ⚡ API completa | Token Bearer, +40 módulos e até 1.000 requisições/minuto. |
+| 💳 Pix | Assinatura mensal com acesso liberado após a confirmação. |
+| 🔐 Segurança | Sessões autenticadas, 2FA, logs de atividade e uso responsável. |
+| 📱 Responsivo | Desktop, tablet e celular. |
 
 ---
 
@@ -48,8 +39,8 @@ A proposta é centralizar consultas, histórico, assinatura mensal e integraçã
 Use apenas exemplos fictícios em repositórios públicos.
 
 ```bash
-curl -X GET "https://morallbuscas.com/api/v1/query/cpf?cpf=00000000000" \
-  -H "Authorization: Bearer SEU_TOKEN_AQUI" \
+curl -X GET "https://cpfbusca.com/api/v1/consulta?modulo=cpf&valor=00000000000" \
+  -H "Authorization: Bearer [REDACTED]" \
   -H "Accept: application/json"
 ```
 
@@ -69,15 +60,24 @@ curl -X GET "https://morallbuscas.com/api/v1/query/cpf?cpf=00000000000" \
 
 ---
 
-## 💼 Planos
+## 💼 Planos do painel
 
-| Plano | Valor | Indicação |
+| Plano | Valor | Destaques |
 |---|---:|---|
-| Essencial | R$30/mês | Acesso inicial ao painel |
-| Profissional | R$50/mês | Melhor custo-benefício |
-| API | R$100/mês | Integrações e uso avançado |
+| Start | R$30/mês | Consultas mensais, histórico básico |
+| Pro | R$50/mês | Histórico completo, prioridade alta ⭐ mais escolhido |
+| Elite | R$100/mês | Módulos avançados, prioridade máxima, suporte premium |
 
-> Edite os valores e limites conforme os planos reais do seu sistema.
+## 🔌 Planos de API
+
+| Plano | Valor | Limite |
+|---|---:|---:|
+| API Start | R$30/mês | 20 req/min |
+| API Plus | R$50/mês | 60 req/min |
+| API Pro | R$100/mês | 250 req/min |
+| API Scale | R$300/mês | 1.000 req/min |
+
+Todos os planos de API incluem todos os módulos, chave Bearer e logs por requisição.
 
 ---
 
@@ -86,34 +86,34 @@ curl -X GET "https://morallbuscas.com/api/v1/query/cpf?cpf=00000000000" \
 Nunca publique no GitHub:
 
 - Token Bearer real
-- CPF real
-- Dados pessoais reais
+- CPF ou dados pessoais reais
 - Prints com informações sensíveis
 - Respostas reais da API
-- Chaves de acesso
 - Arquivos `.env`
 
 Use sempre:
 
 ```env
-MORALL_TOKEN=SEU_TOKEN_AQUI
+CPFBUSCA_TOKEN=SEU_TOKEN_AQUI
 ```
 
-E mantenha o arquivo `.env` fora do GitHub.
+---
+
+## ⚖️ Uso responsável
+
+Utilize a plataforma apenas para finalidades autorizadas e legítimas, respeitando a legislação aplicável e os direitos de terceiros.
 
 ---
 
 ## 🌐 Site oficial
 
-Acesse:
-
-👉 **https://morallbuscas.com/**
+👉 **https://cpfbusca.com/**
 
 ---
 
 <div align="center">
 
-**Morall Buscas**  
-Consultas cadastrais em painel privado.
+**CPF Busca**  
+Informação segura, em um só lugar.
 
 </div>
