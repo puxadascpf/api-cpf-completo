@@ -1,22 +1,25 @@
 <div align="center">
 
-# 🔎 CPF Busca API — CPF Completo via API
+# 🔎 CPF Buscas API — CPF Completo via API
 
-### Consultas rápidas em painel privado e organizado — histórico, assinatura mensal via Pix e API completa.
+### Consultas de CPF e CNPJ em painel privado — histórico, assinatura mensal via Pix e API própria.
 
-[![Site oficial](https://img.shields.io/badge/Acessar%20site-cpfbusca.com-00D4FF?style=for-the-badge)](https://cpfbusca.com/)
-[![API](https://img.shields.io/badge/API-Bearer%20Token-2EF2D0?style=for-the-badge)](#-exemplo-de-api)
-[![Uso responsável](https://img.shields.io/badge/Uso-responsável-FFD166?style=for-the-badge)](#-uso-responsável)
+[![Site oficial](https://img.shields.io/badge/Site%20oficial-cpfbuscas.com-00D4FF?style=for-the-badge)](https://cpfbuscas.com/)
+[![Contingência](https://img.shields.io/badge/Backup-cpfbuscas.net-2EF2D0?style=for-the-badge)](https://cpfbuscas.net/)
+[![Documentação](https://img.shields.io/badge/Docs-API%20v1-FFD166?style=for-the-badge)](https://cpfbuscas.com/api-docs)
 
 </div>
 
 ---
 
-## 🚀 Sobre o CPF Busca
+> **Endereço atualizado:** o domínio oficial agora é **[cpfbuscas.com](https://cpfbuscas.com/)** (com "s").
+> O antigo `cpfbusca.com` não é mais operado pela plataforma. Se o principal estiver indisponível, use **[cpfbuscas.net](https://cpfbuscas.net/)** — mesma conta, mesmas chaves e mesmos limites.
 
-Consulta completa de CPF via API: a **API do CPF Busca** entrega retorno organizado com cobertura ampla de módulos e documentação por endpoint.
+## 🚀 Sobre o CPF Buscas
 
-O **CPF Busca** (cpfbusca.com) é uma plataforma privada de consultas com **mais de 40 módulos**, painel moderno com histórico organizado, assinatura mensal via **Pix** com liberação automática e uma **API completa** para integração com sistemas próprios.
+Consulta completa de CPF via API: a **API do CPF Buscas** entrega retorno organizado com cobertura ampla de módulos e documentação por endpoint.
+
+O **CPF Buscas** é uma plataforma privada com **62 módulos de consulta**, painel com histórico organizado, assinatura mensal via **Pix** com liberação após a confirmação e uma **API REST** para integração com sistemas próprios.
 
 ---
 
@@ -24,96 +27,87 @@ O **CPF Busca** (cpfbusca.com) é uma plataforma privada de consultas com **mais
 
 | Recurso | Descrição |
 |---|---|
-| 🔎 Consultas rápidas | CPF, nome, telefone, placa, chassi, CNPJ, endereço/CEP, parentes, vizinhos, score, fotos e mais. |
-| 📊 Painel privado | Dashboard limpo com plano, uso mensal e limites transparentes. |
+| 🔎 Consultas | CPF, CNPJ, nome, telefone, placa, endereço/CEP e outros módulos do catálogo. |
+| 📊 Painel privado | Dashboard com plano, uso mensal e limites transparentes. |
 | 🕘 Histórico | Cada consulta registrada e fácil de revisar. |
-| ⚡ API completa | Token Bearer, +40 módulos e até 1.000 requisições/minuto. |
+| ⚡ API REST | Token Bearer, 62 módulos, respostas JSON e até 1.000 requisições/minuto. |
 | 💳 Pix | Assinatura mensal com acesso liberado após a confirmação. |
+| 🛟 Contingência | Domínio de backup `cpfbuscas.net` com a mesma API e a mesma conta. |
 | 🔐 Segurança | Sessões autenticadas, 2FA, logs de atividade e uso responsável. |
-| 📱 Responsivo | Desktop, tablet e celular. |
 
 ---
 
 ## ⚡ Exemplo de API
 
-Use apenas exemplos fictícios em repositórios públicos.
+| | URL |
+|---|---|
+| Base URL principal | `https://cpfbuscas.com/api/v1` |
+| Base URL de contingência | `https://cpfbuscas.net/api/v1` |
+| Catálogo de módulos (público) | `https://cpfbuscas.com/api/v1/modules` |
 
 ```bash
-curl -X GET "https://cpfbusca.com/api/v1/consulta?modulo=cpf&valor=00000000000" \
-  -H "Authorization: Bearer [REDACTED]" \
+curl -X GET "https://cpfbuscas.com/api/v1/query/cpf?cpf=00000000000" \
+  -H "Authorization: Bearer $CPFBUSCAS_TOKEN" \
   -H "Accept: application/json"
 ```
 
-### Exemplo de resposta fictícia
+### Exemplo de resposta (fictícia)
 
 ```json
 {
   "success": true,
-  "type": "cpf",
-  "data": {
-    "document": "000.000.000-00",
-    "status": "exemplo_ficticio",
-    "message": "Resposta demonstrativa para documentação pública."
-  }
+  "endpoint": "cpf",
+  "data": {}
 }
 ```
+
+Troque para a Base URL de contingência apenas em falha de rede, timeout ou HTTP 5xx. Erros 4xx (401, 422, 429) são respostas válidas da API.
 
 ---
 
 ## 💼 Planos do painel
 
-| Plano | Valor | Destaques |
-|---|---:|---|
-| Start | R$30/mês | Consultas mensais, histórico básico |
-| Pro | R$50/mês | Histórico completo, prioridade alta ⭐ mais escolhido |
-| Elite | R$100/mês | Módulos avançados, prioridade máxima, suporte premium |
+| Plano | Valor | Consultas/mês |
+|---|---:|---:|
+| Start | R$30/mês | 300 |
+| Pro ⭐ | R$50/mês | 1.000 |
+| Elite | R$100/mês | 5.000 |
 
 ## 🔌 Planos de API
 
-| Plano | Valor | Limite |
-|---|---:|---:|
-| API Start | R$30/mês | 20 req/min |
-| API Plus | R$50/mês | 60 req/min |
-| API Pro | R$100/mês | 250 req/min |
-| API Scale | R$300/mês | 1.000 req/min |
+| Plano | Valor | Limite | Chaves |
+|---|---:|---:|---:|
+| API Start | R$30/mês | 20 req/min | 1 |
+| API Plus | R$50/mês | 60 req/min | 2 |
+| API Pro | R$100/mês | 180 req/min | 3 |
+| API Scale | R$300/mês | 1.000 req/min | 4 |
 
-Todos os planos de API incluem todos os módulos, chave Bearer e logs por requisição.
+Todos os planos de API incluem os 62 módulos. Valores atualizados em [cpfbuscas.com/api](https://cpfbuscas.com/api).
 
 ---
 
 ## 🔐 Segurança
 
-Nunca publique no GitHub:
-
-- Token Bearer real
-- CPF ou dados pessoais reais
-- Prints com informações sensíveis
-- Respostas reais da API
-- Arquivos `.env`
-
-Use sempre:
+Nunca publique no GitHub: token Bearer real, CPF ou dados pessoais reais, prints com informações sensíveis, respostas reais da API ou arquivos `.env`.
 
 ```env
-CPFBUSCA_TOKEN=SEU_TOKEN_AQUI
+CPFBUSCAS_TOKEN=SEU_TOKEN_AQUI
 ```
-
----
 
 ## ⚖️ Uso responsável
 
-Utilize a plataforma apenas para finalidades autorizadas e legítimas, respeitando a legislação aplicável e os direitos de terceiros.
+Utilize a plataforma apenas para finalidades autorizadas e legítimas, respeitando a LGPD e os direitos de terceiros.
 
 ---
 
-## 🌐 Site oficial
+## 🌐 Links oficiais
 
-👉 **https://cpfbusca.com/**
-
----
+- Site: **https://cpfbuscas.com/**
+- Contingência: **https://cpfbuscas.net/**
+- Documentação da API: **https://cpfbuscas.com/api-docs**
 
 <div align="center">
 
-**CPF Busca**  
-Informação segura, em um só lugar.
+**CPF Buscas** · Informação segura, em um só lugar.
 
 </div>
