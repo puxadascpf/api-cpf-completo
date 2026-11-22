@@ -98,6 +98,8 @@ Utilize a plataforma apenas para finalidades autorizadas e legítimas, respeitan
 
 ## 🌐 Links oficiais
 
+- [CPF Buscas — endereço adicional: cpfbuscas.fs.kg](https://cpfbuscas.fs.kg/)
+
 - Site: **https://cpfbuscas.net/**
 - Documentação da API: **https://cpfbuscas.net/api-docs**
 
